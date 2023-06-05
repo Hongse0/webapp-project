@@ -38,6 +38,18 @@
         INSERT INTO MEMBER_INFO(MEMBER_NAME,BIRTH_DATE,DETAILTEAM_CODE,DETAIL_INFO,CONTACT,TEAM_CODE,ACTIVE_STATUS)
         VALUES (#{memberName},#{birthDate},#{detailTeamCode},#{detailInfo},#{contact},#{teamCode},#{activeStatus})
     </insert>
+    <select id="joinMember" resultMap="memberResultMap">
+        SELECT MEMBER_CODE,
+               MEMBER_NAME,
+               BIRTH_DATE,
+               DETAILTEAM_CODE,
+               DETAIL_INFO,
+               CONTACT,
+               TEAM_CODE,
+               ACTIVE_STATUS
+        FROM MEMBER_INFO
+        WHERE TEAM_CODE = #{ teamCode }
+    </select>
 
 
 </mapper>

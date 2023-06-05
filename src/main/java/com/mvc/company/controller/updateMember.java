@@ -20,9 +20,6 @@ public class updateMember extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-
-//        MemberDTO memberCode = request.getParameter("memberCode");
-//        MemberDTO teamCode = request.getParameter("teamCode2");
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setMemberCode(request.getParameter("memberCode"));
         memberDTO.setTeamCode(request.getParameter("teamCode2"));

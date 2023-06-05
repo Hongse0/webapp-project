@@ -13,13 +13,13 @@
 
 <hr>
 
-<form action="SearchMembersServlet" method="POST">
+<form action="/member/join" method="POST">
     <h2>부서에 속한 직원 검색</h2>
     <label>조회할 부서 코드 : </label>
     <input type="text" name="teamCode3" id="teamCode3">
     <button type="submit">조회하기</button>
 </form>
-
+<a href="/team/list">전체 팀 정보</a>
 <hr>
 
 <form action="/member/insert" method="POST">

@@ -2,7 +2,6 @@ package com.mvc.company.model.dao;
 
 import com.mvc.company.model.dto.MemberDTO;
 
-import java.sql.Connection;
 import java.util.List;
 
 public interface MemberDAO {
@@ -14,4 +13,7 @@ public interface MemberDAO {
     int updateMember(MemberDTO memberDTO);
 
     int insertMember(MemberDTO memberDTO);
+
+
+    List<MemberDTO> joinMember(MemberDTO memberDTO);
 }

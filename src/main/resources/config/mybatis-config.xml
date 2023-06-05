@@ -4,6 +4,7 @@
     <properties resource="config/connection-info.properties"/>
     <typeAliases>
         <typeAlias type="com.mvc.company.model.dto.MemberDTO" alias="MemberDTO"/>
+        <typeAlias type="com.mvc.company.model.dto.TeamDTO" alias="TeamDTO"/>
     </typeAliases>
 
     <environments default="dev">

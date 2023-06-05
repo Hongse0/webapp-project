@@ -69,4 +69,15 @@ public class MemberService {
 
         return result>0 ? true:false;
     }
+
+
+    public List<MemberDTO> joinMember(MemberDTO memberDTO) {
+        SqlSession sqlSession = getSqlSession();
+        memberDAO = sqlSession.getMapper(MemberDAO.class);
+
+        List<MemberDTO> joinMemberList = memberDAO.joinMember(memberDTO);
+        sqlSession.close();
+        return joinMemberList;
+
+    }
 }
