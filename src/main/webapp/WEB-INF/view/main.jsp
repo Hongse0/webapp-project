@@ -16,18 +16,18 @@
 <form action="SearchMembersServlet" method="POST">
     <h2>부서에 속한 직원 검색</h2>
     <label>조회할 부서 코드 : </label>
-    <input type="text" name="teamCode" id="teamCode">
+    <input type="text" name="teamCode3" id="teamCode3">
     <button type="submit">조회하기</button>
 </form>
 
 <hr>
 
-<form action="AddMemberServlet" method="POST">
+<form action="/member/insert" method="POST">
     <h2>직원 추가</h2>
-    직원명 : <input type="text" name="memberName"><br>
-    생년월일 : <input type="text" name="birthDate"><br>
+    직원명 : <input type="text" id="memberName" name="memberName"><br>
+    생년월일 : <input type="text" id="birthDate" name="birthDate"><br>
     소속팀코드 :
-    <select name="detailTeamCode">
+    <select id="detailTeamCode" name="detailTeamCode">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -42,11 +42,11 @@
         <option value="12">12</option>
     </select>
     <br>
-    거주지 : <input type="text" name="detailInfo"><br>
+    거주지 : <input type="text" id="detailInfo" name="detailInfo"><br>
     연락처 :
-    <input type="tel" name="contact"><br>
+    <input type="tel" id="contact" name="contact"><br>
     부서 코드 :
-    <select name="teamCode">
+    <select id="teamCode" name="teamCode">
         <option value="1">플랫폼개발팀</option>
         <option value="2">웹개발팀</option>
         <option value="3">모바일 앱 개발팀</option>
@@ -56,7 +56,7 @@
     </select>
     <br>
     근무 여부 :
-    <select name="activeStatus">
+    <select id="activeStatus" name="activeStatus">
         <option value="Y">Y</option>
         <option value="N">N</option>
     </select>
@@ -67,14 +67,13 @@
 <hr>
 
 
-<form action="UpdateMemberServlet" method="POST">
+<form action="/member/update" method="POST">
     <h2>직원 수정</h2>
     <label for="memberCode">직원 코드:</label>
     <input type="text" id="memberCode" name="memberCode" required><br>
-
-    <!-- 수정할 정보 입력 필드 추가 -->
-
-    <input type="submit" value="수정">
+    <label for="teamCode2">수정할 부서 코드 :</label>
+    <input type="text" id="teamCode2" name="teamCode2" required><br>
+    <button type="submit">직원 정보 수정</button>
 </form>
 
 <hr>

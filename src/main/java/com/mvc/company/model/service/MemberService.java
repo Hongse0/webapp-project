@@ -39,4 +39,34 @@ public class MemberService {
     }
 
 
+    public boolean updateMember(MemberDTO memberDTO) {
+        SqlSession sqlSession = getSqlSession();
+        memberDAO = sqlSession.getMapper(MemberDAO.class);
+
+        int result = memberDAO.updateMember(memberDTO);
+
+        if (result > 0) {
+            sqlSession.commit();
+        } else {
+            sqlSession.rollback();
+        }
+        sqlSession.close();
+        return result>0 ? true:false;
+    }
+
+    public boolean insertMember(MemberDTO memberDTO) {
+        SqlSession sqlSession = getSqlSession();
+        memberDAO = sqlSession.getMapper(MemberDAO.class);
+
+        int result = memberDAO.insertMember(memberDTO);
+        if(result>0){
+            sqlSession.commit();
+        }else{
+            sqlSession.rollback();
+        }
+
+        sqlSession.close();
+
+        return result>0 ? true:false;
+    }
 }

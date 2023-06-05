@@ -1,19 +1,19 @@
 package com.mvc.company.model.dto;
 
 public class MemberDTO {
-    private int memberCode;
+    private String memberCode;
     private String memberName;
     private String birthDate;
     private String detailTeamCode;
     private String detailInfo;
     private String contact;
-    private int teamCode;
+    private String teamCode;
     private String activeStatus;
 
     public MemberDTO() {
     }
 
-    public MemberDTO(int memberCode, String memberName, String birthDate, String detailTeamCode, String detailInfo, String contact, int teamCode, String activeStatus) {
+    public MemberDTO(String memberCode, String memberName, String birthDate, String detailTeamCode, String detailInfo, String contact, String teamCode, String activeStatus) {
         this.memberCode = memberCode;
         this.memberName = memberName;
         this.birthDate = birthDate;
@@ -25,11 +25,11 @@ public class MemberDTO {
     }
 
 
-    public int getMemberCode() {
+    public String getMemberCode() {
         return memberCode;
     }
 
-    public void setMemberCode(int memberCode) {
+    public void setMemberCode(String memberCode) {
         this.memberCode = memberCode;
     }
 
@@ -73,11 +73,11 @@ public class MemberDTO {
         this.contact = contact;
     }
 
-    public int getTeamCode() {
+    public String getTeamCode() {
         return teamCode;
     }
 
-    public void setTeamCode(int teamCode) {
+    public void setTeamCode(String teamCode) {
         this.teamCode = teamCode;
     }
 

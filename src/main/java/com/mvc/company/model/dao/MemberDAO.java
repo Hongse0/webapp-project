@@ -10,4 +10,8 @@ public interface MemberDAO {
     List<MemberDTO> selectAllMemberList();
 
     int deleteMember(String memberCode);
+
+    int updateMember(MemberDTO memberDTO);
+
+    int insertMember(MemberDTO memberDTO);
 }

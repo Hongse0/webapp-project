@@ -29,6 +29,15 @@
         DELETE FROM MEMBER_INFO
         WHERE MEMBER_CODE = #{memberCode}
     </delete>
+    <update id="updateMember" parameterType="MemberDTO">
+        UPDATE MEMBER_INFO
+        SET TEAM_CODE = #{teamCode}
+        WHERE MEMBER_CODE = #{memberCode}
+    </update>
+    <insert id="insertMember" parameterType="MemberDTO">
+        INSERT INTO MEMBER_INFO(MEMBER_NAME,BIRTH_DATE,DETAILTEAM_CODE,DETAIL_INFO,CONTACT,TEAM_CODE,ACTIVE_STATUS)
+        VALUES (#{memberName},#{birthDate},#{detailTeamCode},#{detailInfo},#{contact},#{teamCode},#{activeStatus})
+    </insert>
 
 
 </mapper>
