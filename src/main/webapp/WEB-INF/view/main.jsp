@@ -80,7 +80,7 @@
 <form action="/member/delete" method="POST">
     <h2>직원 해고</h2>
     <label for="memberCode2">직원 코드:</label>
-    <input type="text" id="memberCode2" name="memberCode2" required><br>
+    <input type="text" id="memberCode2" name="memberCode2"><br>
     <button type="submit">직원 해고</button>
 </form>
 <hr>
