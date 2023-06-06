@@ -73,6 +73,8 @@
     <input type="text" id="memberCode" name="memberCode" required><br>
     <label for="teamCode2">수정할 부서 코드 :</label>
     <input type="text" id="teamCode2" name="teamCode2" required><br>
+    <label for="teamCode2">수정할 거주지 정보 :</label>
+    <input type="text" id="detailInfo2" name="detailInfo2" required><br>
     <button type="submit">직원 정보 수정</button>
 </form>
 

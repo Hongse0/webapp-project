@@ -20,7 +20,6 @@ public class joinMember extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
 
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setTeamCode(request.getParameter("teamCode3"));
@@ -31,7 +30,7 @@ public class joinMember extends HttpServlet {
         if(joinList != null && joinList.size()>0){
             path = "/WEB-INF/view/joinPage.jsp";
         }else {
-            path ="WEB-INF/view/common/errorPage.jsp";
+            path ="/WEB-INF/view/common/errorPage.jsp";
             request.setAttribute("errorMessage","해당 직원들 조회에 실패하였습니다");
         }
 

@@ -31,7 +31,14 @@
     </delete>
     <update id="updateMember" parameterType="MemberDTO">
         UPDATE MEMBER_INFO
-        SET TEAM_CODE = #{teamCode}
+        <set>
+            <if test="teamCode != null and teamCode != '' ">
+                TEAM_CODE = #{teamCode},
+            </if>
+            <if test="detailInfo != null and detailInfo != '' ">
+                DETAIL_INFO = #{detailInfo},
+            </if>
+        </set>
         WHERE MEMBER_CODE = #{memberCode}
     </update>
     <insert id="insertMember" parameterType="MemberDTO">

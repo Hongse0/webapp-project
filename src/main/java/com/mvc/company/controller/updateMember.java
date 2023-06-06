@@ -23,6 +23,7 @@ public class updateMember extends HttpServlet {
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setMemberCode(request.getParameter("memberCode"));
         memberDTO.setTeamCode(request.getParameter("teamCode2"));
+        memberDTO.setDetailInfo(request.getParameter("detailInfo2"));
         boolean success = memberService.updateMember(memberDTO);
 
         String path = "";
