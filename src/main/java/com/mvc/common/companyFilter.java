@@ -17,9 +17,7 @@ public class companyFilter implements Filter {
         servletRequest.setCharacterEncoding("UTF-8");
         servletResponse.setCharacterEncoding("UTF-8");
 
-
         filterChain.doFilter(servletRequest, servletResponse);
-
 
     }
 

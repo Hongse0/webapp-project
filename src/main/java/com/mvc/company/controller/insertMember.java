@@ -18,7 +18,7 @@ public class insertMember extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
+
 
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setMemberName(request.getParameter("memberName"));
