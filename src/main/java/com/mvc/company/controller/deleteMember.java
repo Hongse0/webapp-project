@@ -6,6 +6,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/member/delete")
 public class deleteMember extends HttpServlet {
@@ -17,7 +18,6 @@ public class deleteMember extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 
         String memberCode = request.getParameter("memberCode2");
 

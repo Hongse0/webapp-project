@@ -7,6 +7,7 @@ import java.io.IOException;
 @WebFilter("/*")
 public class companyFilter implements Filter {
 
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("프로젝트 실행");
@@ -23,6 +24,8 @@ public class companyFilter implements Filter {
 
     @Override
     public void destroy() {
+
+
         System.out.println("프로젝트 종료");
     }
 }

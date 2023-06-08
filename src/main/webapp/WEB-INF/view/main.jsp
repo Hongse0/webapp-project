@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>SY IT COMPANY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 <body>
 <jsp:include page="common/header.jsp"/>
@@ -61,7 +62,8 @@
         <option value="N">N</option>
     </select>
    <br>
-    <button type="submit">직원 등록하기</button>
+    <button type="submit" id="send-info">직원 등록하기</button>
+
 </form>
 
 <hr>
@@ -82,8 +84,7 @@
 <form action="/member/delete" method="POST">
     <h2>직원 해고</h2>
     <label for="memberCode2">직원 코드:</label>
-    <input type="text" id="memberCode2" name="memberCode2"><br>
-    <button type="submit">직원 해고</button>
+    <input type="text" id="memberCode2" name="memberCode2"><button type="submit" id="deleteButton">직원 해고</button><br>
 </form>
 <hr>
 </body>
