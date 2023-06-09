@@ -81,11 +81,31 @@
 </form>
 
 <hr>
-<form action="/member/delete" method="POST">
     <h2>직원 해고</h2>
     <label for="memberCode2">직원 코드:</label>
     <input type="text" id="memberCode2" name="memberCode2"><button type="submit" id="deleteButton">직원 해고</button><br>
-</form>
+    <script>
+        $("#deleteButton").click(function (){
+            const message = $("#memberCode2").val();
+
+            $.ajax({
+                url:"/member/delete",
+                type:"post",
+                data: {message: message},
+                success: function (data,textStatus,xhr){
+                    if(confirm(message+"번 직원을 해고하시겠습니까?"+data)){
+                        $("#memberCode2").val("");
+                    }else{
+                        $("#memberCode2").val("");
+                    }
+                },
+                error: function (xhr,status,error){
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+
 <hr>
 </body>
 </html>
